@@ -1,12 +1,34 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-  </head>
-<body>
-<h1>hinm</h1>
-  <form>
-  <div class="cf-turnstile" data-sitekey="0x4AAAAAACzm8Tn9_rUsL5Ll"></div>
-  </form>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turnstile Test - GitHub Pages</title>
+    
+    <!-- 1. Load the Turnstile API script -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body> 
+
+    <h2>Verify You Are Human</h2>
+    
+    <!-- 
+      This form is just for testing. 
+      In a real scenario, the 'action' would be your form provider (like Web3Forms).
+    -->
+    <form action="javascript:alert('Form Submitted Successfully!')" method="POST">
+        
+        <p>Name: <input type="text" name="name" required></p>
+        
+        <!-- 2. The Turnstile Widget Container 
+             The data-sitekey below is a dummy key for testing. 
+             Replace it with your REAL Site Key when you're ready to go live.
+        -->
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAACzm8Tn9_rUsL5Ll"></div> 
+
+        <br>
+        <button type="submit">Submit Form</button>
+    </form> 
+
 </body>
 </html>
